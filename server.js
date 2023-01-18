@@ -29,11 +29,14 @@ mongoose.set('strictQuery', false);
 
 
 
+
+
 Connection(URL);
 
-if (process.env.NODE_ENV === 'production'){
+if(process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'))
 }
+
 app.listen(PORT, () => console.log(`Server is running ${PORT}`));
 
 DefaultData();
