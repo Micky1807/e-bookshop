@@ -30,7 +30,7 @@ const PASSWORD = process.env.DB_PASSWORD;
 
 
 
-Connection(URL);
+Connection(USERNAME,PASSWORD);
 
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'))
